@@ -1,0 +1,131 @@
+:root {
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	|* Grid
+	*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	--gutter-w: 1rem;
+	--gutter-h: 2rem;
+
+
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	|* Media
+	*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	/* ~ media: xxxs ~ */
+	--media-xxxs-w: 568px;
+	--media-xxxs-h: 568px;
+
+	/* ~ media: xxs ~ */
+	--media-xxs-w: 568px;
+	--media-xxs-h: 568px;
+
+	/* ~ media: xs ~ */
+	--media-xs-w: 568px;
+	--media-xs-h: 568px;
+
+	/* ~ media: sm ~ */
+	--media-sm-w: 768px;
+	--media-sm-h: 768px;
+
+	/* ~ media: md ~ */
+	--media-md-w: 1023px;
+	--media-md-h: 960px;
+
+	/* ~ media: lg ~ */
+	--media-lg-w: 1140px;
+	--media-lg-h: 1050px;
+
+	/* ~ media: xl ~ */
+	--media-xl-w: 1680px;
+	--media-xl-h: 1080px;
+
+	/* ~ media: xxl ~ */
+	--media-xxl-w: 1680px;
+	--media-xxl-h: 1080px;
+
+	/* ~ media: xxxl ~ */
+	--media-xxxl-w: 1680px;
+	--media-xxxl-h: 1080px;
+
+
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	|* Text Node
+	*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	/* ~ text-node: base ~ */
+	--text-node-base-font-sans-serif: sans-serif;
+	--text-node-base-font-serif: serif;
+	--text-node-base-size: 1em;
+	--text-node-base-scale-ratio: 1.2;
+	--text-node-base-html-line-height: 1.4;
+	--text-node-base-heading-line-height: 1.2;
+
+	/* ~ text-node: scale ratio ~ */
+	--text-node-scale-ratio-e1: var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e2: var(--text-node-scale-ratio-e1) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e3: var(--text-node-scale-ratio-e2) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e4: var(--text-node-scale-ratio-e3) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e5: var(--text-node-scale-ratio-e4) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e6: var(--text-node-scale-ratio-e5) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e7: var(--text-node-scale-ratio-e6) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e8: var(--text-node-scale-ratio-e7) * var(--text-node-base-scale-ratio);
+	--text-node-scale-ratio-e9: var(--text-node-scale-ratio-e8) * var(--text-node-base-scale-ratio);
+
+	/* ~ text-node: scale ~ */
+	/*001*/--text-node-xxxs: calc(var(--text-node-base-size) / var(--text-node-scale-ratio-e4));
+	/*002*/--text-node-xxs: calc(var(--text-node-base-size) / var(--text-node-scale-ratio-e3));
+	/*003*/--text-node-xs: calc(var(--text-node-base-size) / var(--text-node-scale-ratio-e2));
+	/*004*/--text-node-sm: calc(var(--text-node-base-size) / var(--text-node-scale-ratio-e1));
+	/*005*/--text-node-md: calc(var(--text-node-base-size) * var(--text-node-scale-ratio-e1));
+	/*006*/--text-node-lg: calc(var(--text-node-base-size) * var(--text-node-scale-ratio-e2));
+	/*007*/--text-node-xl: calc(var(--text-node-base-size) * var(--text-node-scale-ratio-e3));
+	/*008*/--text-node-xxl: calc(var(--text-node-base-size) * var(--text-node-scale-ratio-e4));
+	/*009*/--text-node-xxxl: calc(var(--text-node-base-size) * var(--text-node-scale-ratio-e5));
+
+
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	|* Aliases
+	*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+	--html-font-size: var(--text-node-base-size);
+	--html-font-family-sans-serif: var(--text-node-base-font-sans-serif);
+	--html-font-family-serif: var(--text-node-base-font-serif);
+	--html-font-family: var(--text-node-base-font-sans-serif);
+	--html-line-height: var(--text-node-base-html-line-height);
+	--heading-line-height: var(--text-node-base-heading-line-height);
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|* Pseudo
+*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+*,
+*::after,
+*::before {
+	-o-tap-highlight-color: transparent;
+	-ms-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+	-khtml-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: transparent;
+	tap-highlight-color: transparent;
+	box-sizing: border-box;
+	outline-style: none;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|* Block
+*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+html {
+	font-size: var(--html-font-size);
+	font-family: var(--html-font-family);
+	line-height: var(--html-line-height);
+  text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -khtml-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+	margin: 0;
+}
+
+/* ... */

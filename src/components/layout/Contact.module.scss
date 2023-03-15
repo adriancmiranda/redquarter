@@ -1,0 +1,135 @@
+.Contact {
+	@include relative;
+	@include span(10/10);
+	@include size(null auto);
+	@include padding(94px null 0 null);
+	background: _color(brand-3) left no-repeat url('/watermarks/arrows.svg');
+	background-size: cover;
+	color: _color(ui-1);
+
+	&-wrapper {
+		@include relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&-card {
+		@include relative;
+		@include span(8/10);
+		@include margin(null null 60px null);
+
+		&-title {
+			@include font-responsive(_font('sm.mobile')...);
+			color: _color(brand-4);
+			font-family: _font(sansSerif);
+			margin-bottom: 22px;
+		}
+
+		&-subtitle {
+			@include font-responsive(_font('xl.mobile')...);
+			font-family: _font(sansSerif);
+			margin-bottom: 20px;
+		}
+
+		&-description {
+			@include font-responsive(_font('md.mobile')...);
+			font-family: _font(sansSerif);
+		}
+	}
+
+	&-section {
+		@include relative;
+		@include span(10/10);
+
+		&-component {
+			@include relative;
+		}
+	}
+
+	&-context {
+		@include relative;
+		@include size(null auto);
+		color: _color(ui-1);
+
+		&-title {
+			@include margin(60px null 22px null);
+			@include font-responsive(_font('lg.mobile')...);
+			color: _color(ui-1);
+			font-family: _font(sansSerif);
+			font-weight: _font('weight.semiBold');
+			text-align: center;
+		}
+
+		&-brands {
+			@include relative;
+			display: flex;
+			align-items: center;
+
+			> *:not(:last-child) {
+				margin-right: 4%;
+			}
+		}
+
+		&-description {
+			@include margin(null null 60px null);
+			@include font-responsive(_font('md.mobile')...);
+			color: _color(ui-1);
+			font-family: _font(sansSerif);
+			text-align: center;
+		}
+	}
+
+	// BREAKPOINTS
+	// ~~~~~~~~~~~
+	// ~ DESKTOP > 1023 ~
+	@include media-query-size-x(lg xl unknown) {
+		&::before {
+			@include absolute(-25px null null 19%);
+			@include size(50px);
+			background-color: _color(brand-4);
+			border-radius: 50%;
+			content: " ";
+		}
+
+		&-wrapper {
+			@include relative;
+			@include margin(0 null 100px null);
+			display: grid;
+			align-items: center;
+		}
+
+		&-card {
+			@include relative;
+			@include span(4/10);
+			@include margin(null null 0 null);
+			order: 1;
+		}
+
+		&-context {
+			@include relative;
+			@include span(4/10);
+			@include size(null auto);
+			order: 2;
+
+			&-title {
+				@include font-responsive(_font('lg.desktop')...);
+				margin-top: 10px;
+				text-align: left;
+			}
+
+			&-description {
+				@include font-responsive(_font('md.desktop')...);
+				text-align: left;
+			}
+		}
+
+		&-section {
+			@include absolute;
+			@include span(5/10);
+			justify-self: flex-end;
+			order: 3;
+		}
+	}
+}
+

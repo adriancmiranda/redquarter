@@ -1,0 +1,71 @@
+:global(html) {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.15;
+  text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -khtml-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+:global(body) {
+  margin: 0;
+}
+
+:global(article),
+:global(aside),
+:global(details),
+:global(figcaption),
+:global(figure),
+:global(footer),
+:global(header),
+:global(hgroup),
+:global(main),
+:global(nav),
+:global(section),
+:global(menu),
+:global(summary) {
+  display: block;
+}
+
+:global(h1) {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6) {
+  margin-top: 0;
+}
+
+:global(figure) {
+  margin: 1em 40px;
+}
+
+:global(hr) {
+  box-sizing: content-box;
+  height: 0;
+}
+
+:global(pre) {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  overflow: auto;
+}
+
+:global(fieldset) {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+:global(table) {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

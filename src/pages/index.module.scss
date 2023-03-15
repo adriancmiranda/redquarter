@@ -1,0 +1,25 @@
+.Index {
+	@include relative;
+	@include span(12/12);
+	@include size(null auto);
+	@include padding(20px 2px null 2px);
+
+	&-wrapper {
+		@include span(10/12, 1/12, $clearfix: false);
+	}
+
+	// BREAKPOINTS
+	// ~~~~~~~~~~~
+	// ~ MOBILE landscape ~
+	@include media-query-size-x(xs sm md, landscape) {
+	}
+
+	// ~ DESKTOP > 1023 ~
+	@include media-query-size-x(lg xl unknown) {
+	}
+
+	// ~ DESKTOP:COMMON 1366x600 ~
+	@include media-query-size-y(xs sm) {
+	}
+}
+

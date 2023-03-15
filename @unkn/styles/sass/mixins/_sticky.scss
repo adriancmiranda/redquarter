@@ -1,0 +1,6 @@
+@import "position";
+
+@mixin sticky($args: null) {
+	@include position(sticky, $args);
+	@include position(-webkit-sticky);
+}

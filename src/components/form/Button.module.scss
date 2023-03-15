@@ -1,0 +1,15 @@
+.Button {
+	@include ButtonBase(
+		$fontFamily: _font('sansSerif'),
+		$fontSize: _font('xs.mobile'),
+		$fontWeight: _font('weight.medium'),
+		$backgroundColor: _color('brand-4'),
+		$hoverBackgroundColor: _color('brand-4'),
+		$focusBackgroundColor: _color('brand-4'),
+		$activeBackgroundColor: _color('brand-4'),
+		$padding: em(12) em(14),
+		$borderRadius: 6px,
+		$margin: 0,
+		$boxShadow: 'none',
+	);
+}

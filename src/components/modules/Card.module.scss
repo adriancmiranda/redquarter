@@ -1,0 +1,65 @@
+.Card {
+	$this: &;
+
+	@include relative;
+	@include size(100% auto);
+	padding: 22px;
+	margin-bottom: 63px;
+	border-radius: 22px;
+	background-color: _color(ui-1);
+
+	&-wrapper {
+		@include relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	&.rtl {
+		flex-direction: row-reverse;
+		text-align: right;
+	}
+
+	&-content {
+		@include relative;
+		@include span(3/4);
+	}
+
+	&-image {
+		@include relative;
+		@include span(1/4);
+		@include max-size(317px 279px);
+	}
+
+	&-title {
+		@include font-responsive(_font('sm.mobile')...);
+		color: _color(brand-4);
+		font-family: _font(sansSerif);
+		margin-bottom: 22px;
+	}
+
+	&-subtitle {
+		@include font-responsive(_font('xl.mobile')...);
+		color: _color(preset);
+		font-family: _font(sansSerif);
+		margin-bottom: 20px;
+	}
+
+	&-description {
+		@include font-responsive(_font('md.mobile')...);
+		color: _color(preset);
+		font-family: _font(sansSerif);
+	}
+
+	@at-root main[data-ui-layout=mobile] & {
+		text-align: center;
+
+		&-content {
+			@include span(4/4);
+		}
+
+		&-image {
+			display: none;
+		}
+	}
+}

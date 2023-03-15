@@ -1,0 +1,95 @@
+.Footer {
+	@include relative;
+	@include size(100% auto);
+	@include padding(55px null 220px null);
+
+	&-wrapper {
+		@include relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-sign {
+		@include relative;
+		@include span(6/10);
+		@include margin(30px null);
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&-signDate {
+		@include font-responsive(_font('sm.mobile')...);
+		@include margin(null null 7px 5px);
+		font-weight: _font('weight.semiBold');
+		color: _color(brand-1);
+	}
+
+	&-nav {
+		@include relative;
+		@include margin(null null 30px null);
+
+		a {
+			@include relative;
+			@include font-responsive(_font('sm.mobile')...);
+			display: inline-block;
+			color: _color(ui-0);
+			text-decoration: none;
+
+			&::before {
+				@include absolute(null null -4px 0);
+				@include size(102% 30%);
+				transform: scale3d(0,1,1) skewX(25deg);
+				transform-origin: 0% 50%;
+				transition: transform 0.2s ease-out;
+				transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+				background: _color(brand-4);
+				z-index: -1;
+				content: " ";
+			}
+
+			&:not(:last-child) {
+				margin-right: 25px;
+			}
+		}
+	}
+
+	// BREAKPOINTS
+	// ~~~~~~~~~~~
+	// ~ DESKTOP > 1023 ~
+	@include media-query-size-x(lg xl unknown) {
+		&-wrapper {
+			@include margin(30px null 160px null);
+			flex-direction: row;
+		}
+
+		&-sign {
+			@include span(4/10, $clearfix: false);
+			@include margin(0 null);
+		}
+
+		&-signDate {
+			@include margin(null null 7px 11px);
+		}
+
+		&-nav {
+			justify-content: flex-end;
+
+			a {
+				&:hover {
+					color: _color(brand-1);
+
+					&::before {
+						transform: scale3d(1,1,1) skewX(25deg);
+					}
+				}
+
+				&:not(:last-child) {
+					margin-right: 35px;
+				}
+			}
+		}
+	}
+}
+

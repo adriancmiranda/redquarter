@@ -1,0 +1,47 @@
+:global(.is-cloak),
+:global(.x-is-cloak),
+:global([is\:cloak]),
+:global([is-cloak]),
+:global([data-is-cloak]),
+:global([x-is-cloak]) {
+	display: none !important;
+}
+
+:global(.is-disabled),
+:global([disabled]),
+:global([data-state="disabled"]) {
+	pointer-events: none !important;
+	cursor: not-allowed !important;
+}
+
+:global(.is-opaque) {
+	opacity: 0 !important;
+}
+
+:global(.is-visible) {
+	visibility: visible !important;
+}
+
+:global(.is-hidden) {
+	visibility: hidden !important;
+}
+
+:global(.is-block) {
+	display: block !important;
+}
+
+:global(.is-none) {
+	display: none !important;
+}
+
+:global(.is-unselectable) {
+	user-select: none !important;
+}
+
+:global(.is-lowercase) {
+	text-transform: lowercase !important;
+}
+
+:global(.is-uppercase) {
+	text-transform: uppercase !important;
+}

@@ -1,0 +1,40 @@
+.Guidelines {
+	@include fixed(0);
+	@include size(100%);
+	opacity: 0.4;
+	pointer-events: none;
+	z-index: 109;
+}
+
+.Rows,
+.Columns {
+	@include absolute;
+	@include size(100%);
+	@include margin(auto);
+	display: flex;
+	justify-content: space-between;
+}
+
+.Rows {
+	flex-direction: column;
+}
+
+.column {
+	@include size(1px null);
+	background-color: rgba(_color(ui-6), 0.83);
+
+	&:first-of-type,
+	&:last-of-type {
+		background-color: rgba(_color(ui-7), 0.9);
+	}
+}
+
+.row {
+	@include size(null 1px);
+	background-color: rgba(_color(ui-4), 0.73);
+
+	&:first-of-type,
+	&:last-of-type {
+		background-color: rgba(_color(ui-5), 0.9);
+	}
+}

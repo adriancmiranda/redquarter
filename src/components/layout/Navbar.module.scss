@@ -1,0 +1,42 @@
+.Navbar {
+	@include relative;
+	@include size(100% auto);
+	@include margin(null null 119px null);
+
+	&-wrapper {
+		@include relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-brand {
+		@include relative;
+		@include margin(null 2% null null);
+	}
+
+	&-button {
+		@include relative;
+		@include margin(null null null 2%);
+	}
+
+	&-brandComponent {
+		@include size(100% auto);
+	}
+
+	&-buttonComponent {
+		@include font-responsive(_font('xs.mobile')...);
+		background-color: rgba(_color(brand-4), 0.9);
+		font-weight: _font('weight.semiBold');
+	}
+
+	// BREAKPOINTS
+	// ~~~~~~~~~~~
+	// ~ DESKTOP > 1023 ~
+	@include media-query-size-x(lg xl unknown) {
+		&-buttonComponent {
+			@include font-responsive(_font('xs.desktop')...);
+			background-color: _color(brand-4);
+		}
+	}
+}

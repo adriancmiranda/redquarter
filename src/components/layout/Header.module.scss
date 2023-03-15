@@ -1,0 +1,65 @@
+.Header {
+	@include relative;
+	@include span(12/12);
+	@include margin(null null 80px null);
+
+	&-wrapper {
+		@include relative;
+		@include span(10/10);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 1;
+	}
+
+	&-card {
+		@include relative;
+	}
+
+	&-cardTitle {
+		@include relative;
+		@include font-responsive(_font('jb.mobile')...);
+		color: _color(brand-1);
+
+		mark {
+			@include relative;
+			color: _color(brand-1);
+			background-color: transparent;
+			display: inline-block;
+
+			&::before {
+				@include absolute(null null 0 0);
+				@include size(102% 30%);
+				background: _color(brand-4);
+				transform: scale3d(1,1,1) skewX(25deg);
+				transform-origin: 0% 50%;
+				transition: transform 0.5s;
+				transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+				z-index: -1;
+				content: " ";
+			}
+		}
+	}
+
+	&-description {
+		@include font-responsive(_font('md.mobile')...);
+		font-weight: _font('weight.light');
+	}
+
+	&-image {
+		display: none;
+	}
+
+	// BREAKPOINTS
+	// ~~~~~~~~~~~
+	// ~ DESKTOP > 1023 ~
+	@include media-query-size-x(lg xl unknown) {
+		@include margin(null null 140px null);
+
+		&-image {
+			display: block;
+			margin-right: -79px;
+		}
+	}
+}
+

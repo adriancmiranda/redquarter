@@ -1,0 +1,29 @@
+@import "@unkn/styles/sass/@";
+
+*,
+*::after,
+*::before {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	outline-style: none;
+}
+
+html,
+body {
+	@include margin(0);
+}
+
+body {
+	font-size: 16px;
+	background-color: _color(ui-1) or #F1F1F1;
+	font-family: _font(sansSerif) or sans-serif;
+}
+
+input {
+	font-size: inherit;
+}
+
+[data-ui-wrapper] {
+	@include span(10/12, 1/12, $clearfix: false);
+}
+

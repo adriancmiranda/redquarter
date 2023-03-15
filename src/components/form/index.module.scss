@@ -1,0 +1,50 @@
+.Form {
+	@include relative;
+	@include padding(29px 26px);
+	background-color: _color(brand-5);
+	border-radius: 16px;
+
+	&-fieldset {
+		@include margin(0);
+		@include padding(0);
+		border: none;
+	}
+
+	&-legend {
+		@include hide-text;
+	}
+
+	&-section {
+		@include relative;
+	}
+
+	&-button {
+		@include relative;
+		@include margin(29px null null null);
+		@include padding(15px null);
+		@include size(100% auto);
+		font-weight: _font('weight.semiBold');
+	}
+
+	@include media-query-size-x(lg xl unknown) {
+		&-plusSign {
+			@include absolute(null -30px -20px null);
+
+			&::before {
+				width: 37px;
+				border-top: 3px solid _color(brand-4);
+				transform: rotate(0deg);
+				display: block;
+				content: " ";
+			}
+			&::after {
+				width: 37px;
+				border-top: 3px solid _color(brand-4);
+				margin-top: -2px;
+				transform: rotate(90deg);
+				display: block;
+				content: " ";
+			}
+		}
+	}
+}

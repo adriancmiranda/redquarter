@@ -1,0 +1,29 @@
+.About {
+	@include relative;
+	@include span(12/12);
+
+	&::before {
+		content: " ";
+		@include absolute(null null 0 null);
+		@include size(100% 120%);
+		background-image: linear-gradient(-15deg, _color(ui-8), _color(ui-9));
+		clip-path: polygon(0 24%, 100% 13%, 100% 100%, 0 100%);
+	}
+
+	&-wrapper {
+		@include relative;
+	}
+
+	// BREAKPOINTS
+	// ~~~~~~~~~~~
+	// ~ DESKTOP > 1023 ~
+	@include media-query-size-x(lg xl unknown) {
+		@include padding(null null 56px null);
+
+		&::before {
+			@include size(100% 190%);
+			clip-path: polygon(0 54%, 100% 13%, 100% 100%, 0 100%);
+		}
+	}
+}
+

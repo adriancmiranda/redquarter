@@ -1,0 +1,22 @@
+{
+  "name": "@unkn/styles",
+  "version": "1.0.0-alpha.9",
+  "description": "🐚 Utilities and helpers for unkn",
+  "keywords": "unkn-styles-module",
+  "author": "Adrian C. Miranda",
+  "style": "sass/_@.scss",
+  "main": "sass/_@.scss",
+  "license": "MIT",
+  "files": [
+    "vanilla/",
+    "sass/",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "ping": "echo \"pong!\""
+  }
+}

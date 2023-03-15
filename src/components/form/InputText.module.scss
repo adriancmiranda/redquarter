@@ -1,0 +1,39 @@
+.InputText {
+	$this: &;
+
+	@include relative;
+	@include size(100% auto);
+	@include min-size(null 35px);
+	@include overflow(hidden);
+	display: inline-block;
+	background-color: _color(ui-1);
+	border-radius: 6px;
+
+	&-component {
+		@include size(100%);
+		@include padding(26px null null null);
+		font-weight: _font('weight.medium');
+		background-color: transparent;
+		color: _color(brand-5);
+	}
+
+	&-label {
+		@include absolute(null null 0 0);
+		@include size(100% auto);
+	}
+
+	&-labelNode {
+		@include absolute(null null 5px 0);
+		@include padding(10px 5px);
+		font-weight: _font('weight.medium');
+		color: _color(preset);
+		transition: all 300ms ease;
+	}
+
+	&-component:focus + &-label > &-labelNode,
+	&-component:valid + &-label > &-labelNode {
+		@include font-responsive(_font('xs.mobile')...);
+		transform: translateY(-35%);
+		color: _color(ui-10);
+	}
+}

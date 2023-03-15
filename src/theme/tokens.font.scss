@@ -1,0 +1,76 @@
+$fonts:
+(
+	// ~ family ~
+	sansSerif: (
+		var(--typography-heading),
+		Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+		Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+		Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol"
+	),
+	serif: serif,
+
+
+	// ~ weight ~
+	weight:
+	(
+		thin: 100,
+		extraLight: 200,
+		light: 300,
+		normal: 400,
+		medium: 500,
+		semiBold: 600,
+		bold: 700,
+		extraBold: 800,
+		ultraBold: 900,
+	),
+
+
+	// ~ jumbo ~
+	jb:
+	(
+		mobile: ((83 / 1024) * 100vw, 10px, 85px, 83px, null),
+		tablet: ((83 / 1280) * 100vw, 10px, 85px, 83px, null),
+		desktop: ((83 / 1800) * 100vw, 10px, 85px, 83px, null),
+	),
+
+	// ~ extra-large ~
+	xl:
+	(
+		mobile: ((44 / 1024) * 100vw, 10px, 46px, 44px, null),
+		tablet: ((44 / 1280) * 100vw, 10px, 46px, 44px, null),
+		desktop: ((44 / 1800) * 100vw, 10px, 46px, 44px, null),
+	),
+
+	// ~ large ~
+	lg:
+	(
+		mobile: ((22 / 1024) * 100vw, 10px, 24px, 22px, null),
+		tablet: ((22 / 1280) * 100vw, 10px, 24px, 22px, null),
+		desktop: ((22 / 1800) * 100vw, 10px, 24px, 22px, null),
+	),
+
+	// ~ medium ~
+	md:
+	(
+		mobile: ((16 / 460) * 100vw, 10px, 18px, 16px, null),
+		tablet: ((16 / 1280) * 100vw, 10px, 18px, 16px, null),
+		desktop: ((16 / 1800) * 100vw, 10px, 18px, 16px, null),
+	),
+
+	// ~ small ~
+	sm:
+	(
+		mobile: ((14 / 1280) * 100vw, 10px, 16px, 14px, null),
+		tablet: ((14 / 1280) * 100vw, 10px, 16px, 14px, null),
+		desktop: ((14 / 1800) * 100vw, 10px, 16px, 14px, null),
+	),
+
+	// ~ extra-small ~
+	xs:
+	(
+		mobile: ((13 / 920) * 100vw, 10px, 15px, 13px, null),
+		tablet: ((13 / 1024) * 100vw, 10px, 15px, 13px, null),
+		desktop: ((13 / 1800) * 100vw, 10px, 15px, 13px, null),
+	),
+);

@@ -1,0 +1,13 @@
+.Input {
+	@include relative;
+	@include padding(8px 5px);
+	@include font-responsive(_font('sm.mobile')...);
+	color: _color(brand-5);
+	border: none;
+	border-radius: 6px;
+
+	&::selection {
+		color: _color(ui-1);
+		background-color: _color(brand-1);
+	}
+}

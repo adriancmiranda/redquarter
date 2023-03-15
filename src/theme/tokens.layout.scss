@@ -1,0 +1,58 @@
+$layout:
+(
+	xs:
+	(
+		w: 567px,
+		h: 567px,
+	),
+
+	sm:
+	(
+		w: 767px,
+		h: 767px,
+	),
+
+	md:
+	(
+		w: 1023px,
+		h: 959px,
+	),
+
+	lg:
+	(
+		w: 1139px,
+		h: 1049px,
+	),
+
+	xl:
+	(
+		w: 1679px,
+		h: 1079px,
+	),
+
+	grid:
+	(
+		nth: child,
+		columns: 12,
+		maxWidth: 960px,
+		parentFirst: false,
+		gutterWidth: 1%,
+		marginWidth: 2.3%,
+		direction: LTR,
+	),
+
+	zIndex:
+	(
+		frame: 2,
+		dropdown: 101,
+		sticky: 102,
+		fixed: 103,
+		tooltip: 104,
+		backdrop: 105,
+		sheet: 106,
+		modal: 107,
+		popover: 108,
+		guidelines: 109,
+	),
+
+);
